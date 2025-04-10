@@ -50,6 +50,9 @@ class Calculator {
     func add(_ numbers: [Int]) -> Int {
             return numbers.reduce(0, +)
         }
+    func multiply(_ numbers: [Int]) -> Int {
+            return numbers.reduce(1, *)
+        
 }
 
 //: Don't change the name of this object (`calc`); it's used in all the tests.
