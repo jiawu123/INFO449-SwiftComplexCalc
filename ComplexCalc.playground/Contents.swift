@@ -59,6 +59,12 @@ class Calculator {
             guard !numbers.isEmpty else { return 0 }
             return numbers.reduce(0, +) / numbers.count
         }
+    func mathOp(args: [Int], beg: Int, op: (Int, Int) -> Int) -> Int {
+            return args.reduce(beg, op)
+        }
+    func add(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
+            return (lhs.0 + rhs.0, lhs.1 + rhs.1)
+        }
         
 }
 
