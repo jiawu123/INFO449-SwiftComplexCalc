@@ -106,6 +106,11 @@ calc.add(lhs: -10, rhs: -5) == -15
 calc.subtract(lhs: -10, rhs: 5) == -15
 calc.multiply(lhs: -3, rhs: 4) == -12
 calc.divide(lhs: -20, rhs: 5) == -4
+//Array edge cases
+calc.add([]) == 0
+calc.multiply([]) == 1
+calc.avg([]) == 0
+calc.mathOp(args: [], beg: 10, op: { $0 + $1 }) == 10
 
 //: ---
 //: ## Test code block
