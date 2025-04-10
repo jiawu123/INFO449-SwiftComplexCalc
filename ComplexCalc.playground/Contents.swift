@@ -117,7 +117,10 @@ calc.mathOp(args: [], beg: 10, op: { $0 + $1 }) == 10
 calc.add(lhs: (-5, -6), rhs: (3, 4)) == (-2, -2)
 calc.subtract(lhs: (3, -2), rhs: (-4, 4)) == (7, -6)
 
-
+//Dic
+let d1 = ["x": 5]
+let d2 = ["y": 10]
+calc.add(lhs: d1, rhs: d2) == ["x": 5, "y": 10]
 
 //: ---
 //: ## Test code block
