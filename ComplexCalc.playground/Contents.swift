@@ -122,6 +122,8 @@ let d1 = ["x": 5]
 let d2 = ["y": 10]
 calc.add(lhs: d1, rhs: d2) == ["x": 5, "y": 10]
 
+//higer function with negative
+calc.mathOp(lhs: -5, rhs: 10, op: { ($0 - $1) + ($0 + $1) }) == -10
 //: ---
 //: ## Test code block
 //: Do not modify the code in this section
