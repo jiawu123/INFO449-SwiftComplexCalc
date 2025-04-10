@@ -101,8 +101,11 @@ let calc = Calculator()
 //: Suggestions for new tests: What about negative numbers? What about avg and an empty array? What about add or multiply with an empty array?
 //:
 //: Keep in mind that writing new tests may reveal ambiguity in the specification above--if that's the case, document the ambiguity, declare what you think *should* happen, and write the test to test for it.
-
-// ===== Your tests go here
+// Negative numbers tests
+calc.add(lhs: -10, rhs: -5) == -15
+calc.subtract(lhs: -10, rhs: 5) == -15
+calc.multiply(lhs: -3, rhs: 4) == -12
+calc.divide(lhs: -20, rhs: 5) == -4
 
 //: ---
 //: ## Test code block
