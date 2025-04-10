@@ -29,46 +29,65 @@ print("Welcome back to the UW Calculator")
 //:
 class Calculator {
     func add(lhs: Int, rhs: Int) -> Int {
-            return lhs + rhs
-        }
-        
+        return lhs + rhs
+    }
+    
     func subtract(lhs: Int, rhs: Int) -> Int {
-            return lhs - rhs
-        }
-        
+        return lhs - rhs
+    }
+    
     func multiply(lhs: Int, rhs: Int) -> Int {
-            return lhs * rhs
-        }
-        
+        return lhs * rhs
+    }
+    
     func divide(lhs: Int, rhs: Int) -> Int {
-            return lhs / rhs
-        }
+        return lhs / rhs
+    }
+    
     func mathOp(lhs: Int, rhs: Int, op: (Int, Int) -> Int) -> Int {
-            return op(lhs, rhs)
-        
-      }
+        return op(lhs, rhs)
+    }
+    
     func add(_ numbers: [Int]) -> Int {
-            return numbers.reduce(0, +)
-        }
+        return numbers.reduce(0, +)
+    }
+    
     func multiply(_ numbers: [Int]) -> Int {
-            return numbers.reduce(1, *)
+        return numbers.reduce(1, *)
+    }
+    
     func count(_ numbers: [Int]) -> Int {
-            return numbers.count
-        }
+        return numbers.count
+    }
+    
     func avg(_ numbers: [Int]) -> Int {
-            guard !numbers.isEmpty else { return 0 }
-            return numbers.reduce(0, +) / numbers.count
-        }
+        guard !numbers.isEmpty else { return 0 }
+        return numbers.reduce(0, +) / numbers.count
+    }
+    
     func mathOp(args: [Int], beg: Int, op: (Int, Int) -> Int) -> Int {
-            return args.reduce(beg, op)
-        }
+        return args.reduce(beg, op)
+    }
+    
     func add(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
-            return (lhs.0 + rhs.0, lhs.1 + rhs.1)
-        }
+        return (lhs.0 + rhs.0, lhs.1 + rhs.1)
+    }
+    
     func subtract(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
-            return (lhs.0 - rhs.0, lhs.1 - rhs.1)
-        }
-        
+        return (lhs.0 - rhs.0, lhs.1 - rhs.1)
+    }
+    
+    func add(lhs: [String: Int], rhs: [String: Int]) -> [String: Int] {
+        let x = (lhs["x"] ?? 0) + (rhs["x"] ?? 0)
+        let y = (lhs["y"] ?? 0) + (rhs["y"] ?? 0)
+        return ["x": x, "y": y]
+    }
+    
+    func subtract(lhs: [String: Int], rhs: [String: Int]) -> [String: Int] {
+        let x = (lhs["x"] ?? 0) - (rhs["x"] ?? 0)
+        let y = (lhs["y"] ?? 0) - (rhs["y"] ?? 0)
+        return ["x": x, "y": y]
+    }
 }
 
 //: Don't change the name of this object (`calc`); it's used in all the tests.
