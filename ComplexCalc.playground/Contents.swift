@@ -55,7 +55,10 @@ class Calculator {
     func count(_ numbers: [Int]) -> Int {
             return numbers.count
         }
-        
+    func avg(_ numbers: [Int]) -> Int {
+            guard !numbers.isEmpty else { return 0 }
+            return numbers.reduce(0, +) / numbers.count
+        }
         
 }
 
