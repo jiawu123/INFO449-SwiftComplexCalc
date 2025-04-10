@@ -52,6 +52,10 @@ class Calculator {
         }
     func multiply(_ numbers: [Int]) -> Int {
             return numbers.reduce(1, *)
+    func count(_ numbers: [Int]) -> Int {
+            return numbers.count
+        }
+        
         
 }
 
